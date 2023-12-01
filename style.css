@@ -1,0 +1,84 @@
+  @import url('https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,100;9..40,400&family=Darker+Grotesque:wght@900&family=Montserrat&display=swap');
+body,
+html {
+    margin: 0;
+    height: 100%;
+    background-color: black;
+font-family: Darker Grotesque;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed ;
+    width:100%;
+    border: 1px solid;
+    border-radius: 5px;
+    height: 40px;
+    background-color: rgba(0,0,0,0.507);
+    backdrop-filter: blur(8px);
+}
+
+header div { color: rgb(57, 46, 129);}
+
+
+main{padding-top: 45px;}
+
+
+footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    border: 1px solid;
+    height: 70px;
+    background-color: white;
+}
+
+
+.grid-container {
+    display: grid;
+    grid-template-columns:repeat(3,1fr);
+    gap: 20px;
+    padding: 10px;
+    
+}
+
+.grid-item {
+    display: flex;
+    height: 110px;
+    text-transform: uppercase;
+    background-color: white;
+    font-size: 48px;
+    border: none;
+    justify-content: center;
+    align-items: center;
+
+}
+.grid-item:hover{
+    background-color:black ;
+    cursor: pointer;
+    transition:width 2s height 4s;
+    color: white;
+    border: 1px solid white;
+
+}
+
+@media screen and (min-width:400px) {
+    /* for tablet  */
+
+.grid-container {
+    grid-template-columns:repeat(4,1fr);}
+
+}
+
+@media screen and (min-width:700px) {
+ /* for large screen */
+
+.grid-container {
+    grid-template-columns:repeat(6,1fr);}
+
+.grid-item {
+    font-size: 54px;}
+}
